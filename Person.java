@@ -10,9 +10,10 @@ public class Person {
     }
 
     public void speak() {
-        switch (gender) {
-            case MAN -> System.out.println("I'am a man");
-            case WOMAN -> System.out.println("I'am a woman");
+        if (gender == Gender.MAN) {
+            System.out.println("I'm a man");
+        } else {
+            System.out.println("I'm a woman");
         }
     }
 
