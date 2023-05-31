@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ObjectList<T extends ArrayList> {
+public class ObjectList<T> extends ArrayList {
 
     public T add(T value) {
         return add(value);

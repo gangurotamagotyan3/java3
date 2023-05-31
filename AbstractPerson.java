@@ -3,6 +3,6 @@ public abstract class AbstractPerson {
     protected abstract String getGender();
 
     public void speak() {
-        System.out.println("i am a " + getGender());
+        System.out.println("I'm a " + getGender());
     }
 }

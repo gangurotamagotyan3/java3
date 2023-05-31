@@ -20,12 +20,9 @@ public class TextReader {
     }
 
     private void execute() {
-        List<Object> valueList = new ArrayList<Object>();
-        FileReader fr = null;
-        BufferedReader br = null;
-        try {
-            fr = new FileReader(path);
-            br = new BufferedReader(fr);
+        List<Integer> valueList = new ArrayList<>();
+        try (FileReader fr = new FileReader(path);
+                BufferedReader br = new BufferedReader(fr)) {
             String line;
             while ((line = br.readLine()) != null) {
                 valueList.add(Integer.parseInt(line));
@@ -33,8 +30,8 @@ public class TextReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < valueList.size(); i++) {
-            System.out.println(valueList.get(i));
+        for (Integer value : valueList) {
+            System.out.println(value);
         }
     }
 
